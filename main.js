@@ -10,18 +10,10 @@
 // ==/UserScript==
 
 !function() {
-    let config = {};
-
     async function loadConfig() {
-        try {
-            const response = await fetch("https://raw.githubusercontent.com/leksmar/Grafiki-kamieni/main/config.js");
-            if (!response.ok) throw new Error("Failed to load config");
-            const scriptContent = await response.text();
-            eval(scriptContent);
-            console.log("Config loaded:", config);
-        } catch (error) {
-            console.error("Error loading config:", error);
-        }
+        const response = await fetch('https://raw.githubusercontent.com/leksmar/Grafiki-kamieni/main/config.json');
+        const config = await response.json();
+        return config;
     }
 
     const NI = typeof window.Engine != "undefined";
@@ -62,9 +54,7 @@
                 $newImg.zIndex = 1;
                 const $canv = $it.querySelector("canvas");
                 $canv.parentElement.appendChild($newImg);
-                console.log(`Appended image to item ${id}:`, url);
-            } else {
-                console.warn(`Item not found: ${id}`);
+                console.log($it);
             }
         } else {
             g.loadQueue.push({
@@ -77,19 +67,14 @@
                         const $img = $it.querySelector("img");
                         if ($img) {
                             $img.parentElement.appendChild($newImg);
-                            console.log(`Appended image to item ${id}:`, url);
-                        } else {
-                            console.warn(`Image element not found for item ${id}`);
                         }
-                    } else {
-                        console.warn(`Item not found: ${id}`);
                     }
                 }
             });
         }
     }
 
-    function onItem(items) {
+    function onItem(items, config) {
         for (const id in items) {
             const it = items[id];
             const tp = getItemTp(it);
@@ -97,18 +82,16 @@
             const entry = config[tp] ?? config[tpMap];
             if (entry) {
                 appendItemOverlay(id, entry);
-            } else {
-                console.warn(`No config entry found for item ${id} with tp ${tp}`);
             }
         }
     }
 
-    function init() {
+    function init(config) {
         const org = NI ? window.Engine.communication.parseJSON : window.parseInput;
         const override = function(data) {
             const res = org.apply(this, arguments);
             if (data.item) {
-                onItem(data.item);
+                onItem(data.item, config);
             }
             return res;
         }
@@ -189,5 +172,7 @@
         });
     }
 
-    loadConfig().then(init).catch(error => console.error("Failed to load config:", error));
+    loadConfig().then(config => {
+        init(config);
+    });
 }();
