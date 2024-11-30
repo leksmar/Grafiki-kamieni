@@ -11,10 +11,10 @@
 // ==/UserScript==
 
 (async function () {
-    const NI = typeof window.Engine !== "undefined";
     const configURL = "https://raw.githubusercontent.com/leksmar/Grafiki-kamieni/refs/heads/main/config.js";
+    const NI = typeof window.Engine !== "undefined";
 
-    function loadConfig(url) {
+    async function loadConfig(url) {
         return new Promise((resolve, reject) => {
             GM_xmlhttpRequest({
                 method: "GET",
@@ -32,11 +32,10 @@
     }
 
     function loadItemImage(url) {
+        const img = document.createElement("img");
+        img.src = url;
+        img.classList.add("priw8-item-overlay");
         return new Promise(resolve => {
-            const img = document.createElement("img");
-            img.style.display = "none";
-            img.classList.add("priw8-item-overlay");
-            img.src = url;
             img.addEventListener("load", () => {
                 let { width: w, height: h } = img;
                 if (h > 32) { w *= 32 / h; h = 32; }
