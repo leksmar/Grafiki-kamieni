@@ -130,8 +130,7 @@ const config = {
     "4056": "https://micc.garmory-cdn.cloud/obrazki/npc/e2/tri2_witch_e2.gif",
     "3334": "https://micc.garmory-cdn.cloud/obrazki/npc/e2/terrorzaur_pus.gif",
     "3037": "https://micc.garmory-cdn.cloud/obrazki/npc/kol/kolos-drakolisz.gif",
-    "3339": "https://micc.garmory-cdn.cloud/obrazki/npc/her/smokbarb.gif",
-    "334321439": "https://micc.garmory-cdn.cloud"
+    "3339": "https://micc.garmory-cdn.cloud/obrazki/npc/her/smokbarb.gif"
 };
 
 
