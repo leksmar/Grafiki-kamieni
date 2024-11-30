@@ -12,63 +12,35 @@
 // ==/UserScript==
 
 !function() {
-    // Reszta kodu pozostaje bez zmian
-
-    const NI = typeof window.Engine != "undefined";
+    const NI = typeof window.Engine !== "undefined";
 
     function loadItemImage(url) {
-        const $newImg = document.createElement("img");
-        $newImg.src = url;
-        $newImg.classList.add("priw8-item-overlay");
+        const img = document.createElement("img");
+        img.src = url;
+        img.classList.add("priw8-item-overlay");
         return new Promise(resolve => {
-            $newImg.addEventListener("load", () => {
-                let w = $newImg.width, h = $newImg.height;
-                if (h > 32) {
-                    w = w * (32 / h);
-                    h = 32;
-                }
-                if (w > 32) {
-                    h = h * (32 / w);
-                    w = 32;
-                }
-                const offset = (32 - w) / 2;
-                $newImg.width = w;
-                $newImg.height = h;
-                $newImg.style.left = `${offset}px`;
-                $newImg.style.display = "block";
-
-                resolve($newImg);
+            img.addEventListener("load", () => {
+                let { width: w, height: h } = img;
+                if (h > 32) { w *= 32 / h; h = 32; }
+                if (w > 32) { h *= 32 / w; w = 32; }
+                img.width = w;
+                img.height = h;
+                img.style.left = `${(32 - w) / 2}px`;
+                img.style.display = "block";
+                resolve(img);
             });
         });
     }
 
     async function appendItemOverlay(id, url) {
-        if (NI) {
-            const $it = document.querySelector(`.item-id-${id}`);
-            if ($it) {
-                $it.classList.add("priw8-item-small-icon");
-                const $newImg = await loadItemImage(url);
-                $newImg.style.position = "absolute";
-                $newImg.zIndex = 1;
-                const $canv = $it.querySelector("canvas");
-                $canv.parentElement.appendChild($newImg);
-                console.log($it);
-            }
-        } else {
-            g.loadQueue.push({
-                fun: async () => {
-                    const $it = document.querySelector(`#item${id}`);
-                    if ($it) {
-                        $it.classList.add("priw8-item-small-icon");
-                        const $newImg = await loadItemImage(url);
-
-                        const $img = $it.querySelector("img");
-                        if ($img) {
-                            $img.parentElement.appendChild($newImg);
-                        }
-                    }
-                }
-            });
+        const item = document.querySelector(NI ? `.item-id-${id}` : `#item${id}`);
+        if (item) {
+            item.classList.add("priw8-item-small-icon");
+            const newImg = await loadItemImage(url);
+            newImg.style.position = "absolute";
+            newImg.zIndex = 1;
+            const parent = NI ? item.querySelector("canvas").parentElement : item.querySelector("img").parentElement;
+            parent.appendChild(newImg);
         }
     }
 
@@ -76,11 +48,8 @@
         for (const id in items) {
             const it = items[id];
             const tp = getItemTp(it);
-            const tpMap = getTpMap(tp);
-            const entry = config[tp] ?? config[tpMap];
-            if (entry) {
-                appendItemOverlay(id, entry);
-            }
+            const entry = config[tp] ?? config[getTpMap(tp)];
+            if (entry) appendItemOverlay(id, entry);
         }
     }
 
@@ -88,53 +57,30 @@
         const org = NI ? window.Engine.communication.parseJSON : window.parseInput;
         const override = function(data) {
             const res = org.apply(this, arguments);
-            if (data.item) {
-                onItem(data.item);
-            }
+            if (data.item) onItem(data.item);
             return res;
-        }
-        if (NI)
-            window.Engine.communication.parseJSON = override;
-        else
-            window.parseInput = override;
+        };
+        if (NI) window.Engine.communication.parseJSON = override;
+        else window.parseInput = override;
 
         const css = `
-            /* SI */
-            .priw8-item-small-icon img:not(.priw8-item-overlay) {
-                width: 20px;
-                height: 20px;
-                top: 12px;
-                z-index: 1;
+            .priw8-item-small-icon img:not(.priw8-item-overlay), .priw8-item-small-icon canvas.canvas-icon {
+                width: 20px; height: 20px; top: 12px; z-index: 1;
             }
-
-            /* NI */
-            .priw8-item-small-icon canvas.canvas-icon {
-                width: 20px;
-                height: 20px;
-                top: 12px;
-                z-index: 1;
-            }
-            .priw8-item-small-icon .amount, .priw8-item-small-icon .cooldown {
-                z-index: 2;
-            }
+            .priw8-item-small-icon .amount, .priw8-item-small-icon .cooldown { z-index: 2; }
         `;
-
-        const $style = document.createElement("style");
-        $style.innerHTML = css;
-        document.head.appendChild($style);
+        const style = document.createElement("style");
+        style.innerHTML = css;
+        document.head.appendChild(style);
     }
 
     function parseStats(stats) {
-        if (!stats)
-            return {};
-
-        const spl = stats.split(";");
-        const res = {};
-        for (const entry of spl) {
-            const pair = entry.split("=");
-            res[pair[0]] = pair[1] ?? "true";
-        }
-        return res;
+        if (!stats) return {};
+        return stats.split(";").reduce((res, entry) => {
+            const [key, value] = entry.split("=");
+            res[key] = value ?? "true";
+            return res;
+        }, {});
     }
 
     function getItemStats(it) {
@@ -143,10 +89,7 @@
 
     function getItemTp(it) {
         const stats = getItemStats(it);
-        if (stats.teleport || stats.custom_teleport && stats.custom_teleport != "true") {
-            return stats.teleport ?? stats.custom_teleport;
-        }
-        return "";
+        return stats.teleport || (stats.custom_teleport && stats.custom_teleport !== "true") ? stats.teleport ?? stats.custom_teleport : "";
     }
 
     function getTpMap(tp) {
@@ -154,19 +97,13 @@
     }
 
     function getLocationItems(loc) {
-        return NI ? Engine.items.fetchLocationItems(loc).map(it => it) : Object.values(g.item).filter(it => it.loc == loc);
+        return NI ? Engine.items.fetchLocationItems(loc) : Object.values(g.item).filter(it => it.loc === loc);
     }
 
     window.listStones = function() {
         getLocationItems("g").forEach(it => {
-            const stats = getItemStats(it);
-
             const tp = getItemTp(it);
-
-            if (tp != "") {
-                const tpMap = getTpMap(tp);
-                window.log(`${it.name} (${stats.opis}): ${tpMap} (${tp})`);
-            }
+            if (tp) window.log(`${it.name} (${getItemStats(it).opis}): ${getTpMap(tp)} (${tp})`);
         });
     }
 
