@@ -21,12 +21,17 @@
                 url: url,
                 onload: response => {
                     try {
+                        console.log("Config loaded successfully");
                         resolve(eval(response.responseText));
                     } catch (err) {
+                        console.error("Error evaluating config:", err);
                         reject(err);
                     }
                 },
-                onerror: reject,
+                onerror: err => {
+                    console.error("Error loading config:", err);
+                    reject(err);
+                },
             });
         });
     }
@@ -57,6 +62,8 @@
             const img = await loadItemImage(url);
             const parent = NI ? item.querySelector("canvas").parentElement : item.querySelector("img").parentElement;
             parent.appendChild(img);
+        } else {
+            console.warn(`Item with id ${id} not found`);
         }
     }
 
