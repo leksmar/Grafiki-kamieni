@@ -127,7 +127,7 @@
 //E2 199-100
 //Sadolia
 "5940":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/sekta-sadolia.gif",
-//MyĹwiĂłr
+//Mysz
 "972":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/krolszczur.gif",
 //Breh
 "2063":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/draki-breheret-1b.gif",
@@ -139,7 +139,7 @@
 "6057": "https://micc.garmory-cdn.cloud/obrazki/npc/e2/drzewoe2.gif",
 //Chryz
 "6054": "https://micc.garmory-cdn.cloud/obrazki/npc/e2/chryzoprenia.gif",
-//KrĂłlowa
+//Krolowa
 "7345": "https://micc.garmory-cdn.cloud/obrazki/npc/e2/krolowa-sniegu.gif",
 //SK
 "5862":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/prakrolowa.gif",
@@ -155,7 +155,7 @@
 "7375":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/stworzyciel.gif",
 //eol
 "7352":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/piaskowy_potwor-6a.gif",
-//morski potwĂłr
+//morski potwor
 "7357":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/osmiornica-1b.gif",
 //byk
 "7368":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/ingotia_minotaur-7a.gif",
@@ -186,39 +186,38 @@
 "1741":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/krab_big3.gif",
 //Krab2
 "7369":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/krab_big3.gif",
-//WĂłjt
+//Wojt
 "7339":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/goral-e2-wojt-fistula.gif",
 //ozirus
 "7069":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/mumia-ozirus.gif",
 //czacha
 "7066":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/alghul-czaszka-1a.gif",
-//miĹek mag
+//Milek magii
 "6946":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/blotniaki_milosnik_magii.gif",
-//MiĹek ĹowcĂłw
+//Milek lowcow
 "6945": "https://micc.garmory-cdn.cloud/obrazki/npc/e2/blotniaki_milosnik_lowcow.gif",
-//MiĹek rycerzy
+//Milek rycy
 "6944":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/blotniaki_milosnik_rycerzy.gif",
-//jertek
+//Dzertek moxos
 "6938":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/moloch-jertek.gif",
 //Kambion
 "229":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/kambion.gif",
 
-//E2 99-23
+//E2 99-
 //Centaur
 "3765":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/cent-zyfryd.gif",
 //Figlid
 "6781":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/gnom_figlid.gif",
 //Gopa
 "1150":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/goplana.gif",
-//Leszy
+//Widmo
 "1324":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/lesne_widmo.gif",
-//ochyda
+//ochyd
 "3466":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/ugrape2.gif",
-//nadzorczyni
+//nadzo
 "6772":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/nadzorczyni_krasnoludow.gif",
-//czoĹker
+//czolg
 "6636":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/dlawiciel5.gif",
-//czoĹker2
 "6634":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/dlawiciel5.gif",
 //Stopa
 "1204":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/wlochacze_wielka_stopa.gif",
@@ -228,17 +227,15 @@
 "6623":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/nieu_mnich_grabarz.gif",
 //Lisz
 "6625":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/lisz_demilisze.gif",
-//tolloki
+//tollok
 "6632":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/tollok_jask_atamatu.gif",
-//Jotun2
-"6537":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/kam_olbrzym-b.gif",
 //Jotun
+"6537":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/kam_olbrzym-b.gif",
 "6535":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/kam_olbrzym-b.gif",
 //Kozug
 "3436":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/gnoll12.gif",
-//Kozug2
 "3437":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/gnoll12.gif",
-//gnoll vari
+//gnoll
 "333":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/gnoll11.gif",
 //owadzia
 "5395":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/zadlak-e2-owadzia-matka.gif",
@@ -250,24 +247,21 @@
 "125":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/razuglag.gif",
 //tollok
 "5293":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/tollok_shimger.gif",
-//szczÄt
+//szczet
 "2308":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/zbir-szczet.gif",
 //dzik
 "4156":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/dzik.gif",
-//wĹadek gobos
+//wladek
 "727":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/gobmag2.gif",
 //zorg
 "2532":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/zbir-e2-zorg.gif",
 //shea
 "5738":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/demonszef.gif",
-//shea2
 "5740":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/demonszef.gif",
-//kotoĹak
+//kotolak
 "632":"https://micc.garmory-cdn.cloud/obrazki/npc/e1/kotolak_lowca.gif",
 //muszita
 "1060":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/st-puma.gif",
-
-//Dodatkowa konfiguracja uĹźytkownia
 
   }
 

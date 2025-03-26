@@ -12,7 +12,7 @@
 
 (function() {
     const script = document.createElement('script');
-    script.src = 'https://raw.githubusercontent.com/leksmar/Grafiki-kamieni/main/config.js';
+    script.src = 'https://cdn.jsdelivr.net/gh/leksmar/Grafiki-kamieni@main/config.js';
     script.onload = () => console.log('Skrypt załadowany!');
     script.onerror = () => console.error('Błąd ładowania skryptu!');
     document.head.appendChild(script);
