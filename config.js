@@ -153,6 +153,7 @@
 "7466":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/worundriel02.gif",
 //stworek
 "7375":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/stworzyciel.gif",
+"7372":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/stworzyciel.gif",
 //eol
 "7352":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/piaskowy_potwor-6a.gif",
 "7351":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/piaskowy_potwor-6a.gif",
@@ -415,7 +416,6 @@
 "6635":"https://micc.garmory-cdn.cloud/obrazki/npc/her/piekielny_kosciej.gif",
 "6636":"https://micc.garmory-cdn.cloud/obrazki/npc/her/piekielny_kosciej.gif",
 "6771":"https://micc.garmory-cdn.cloud/obrazki/npc/her/piekielny_kosciej.gif",
-"6772":"https://micc.garmory-cdn.cloud/obrazki/npc/her/piekielny_kosciej.gif",
 "6773":"https://micc.garmory-cdn.cloud/obrazki/npc/her/piekielny_kosciej.gif",
 "6775":"https://micc.garmory-cdn.cloud/obrazki/npc/her/piekielny_kosciej.gif",
 "6776":"https://micc.garmory-cdn.cloud/obrazki/npc/her/piekielny_kosciej.gif",
