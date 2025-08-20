@@ -1,7 +1,7 @@
-// tpStoneOverlay - pokazywanie obrazków na teleportach do wybranych map
+// tpStoneOverlay - pokazywanie obrazkĂłw na teleportach do wybranych map
 
-(function () {
-    const config = {
+!function() {
+  const config = {
 //Tytani
 //orla
 "189":"https://micc.garmory-cdn.cloud/obrazki/npc/tyt/dziewicza_orlica.gif",
@@ -427,160 +427,163 @@
 //karm
 
 //patryk
-  };
+  }
 
-    const NI = typeof window.Engine !== "undefined";
+  const NI = typeof window.Engine != "undefined";
 
-    function resizeImage($img) {
-        let w = $img.width, h = $img.height;
-        if (h > 32) {
-            w *= 32 / h;
-            h = 32;
-        }
-        if (w > 32) {
-            h *= 32 / w;
-            w = 32;
-        }
-        const offset = (32 - w) / 2;
-        $img.width = w;
-        $img.height = h;
-        $img.style.left = `${offset}px`;
-        $img.style.display = "block";
-    }
+  function loadItemImage(url) {
+      const $newImg = document.createElement("img");
+      $newImg.src = url;
+      $newImg.classList.add("priw8-item-overlay");
+      return new Promise(resolve => {
+          $newImg.addEventListener("load", () => {
+              let w = $newImg.width, h = $newImg.height;
+              if (h > 32) {
+                  w = w * (32 / h);
+                  h = 32;
+              }
+              if (w > 32) {
+                  h = h * (32 / w);
+                  w = 32;
+              }
+              const offset = (32 - w) / 2;
+              $newImg.width = w;
+              $newImg.height = h;
+              $newImg.style.left = `${offset}px`;
+              $newImg.style.display = "block";
 
-    function loadItemImage(url) {
-        const $newImg = document.createElement("img");
-        $newImg.src = url;
-        $newImg.classList.add("priw8-item-overlay");
-        return new Promise(resolve => {
-            $newImg.addEventListener("load", () => {
-                resizeImage($newImg);
-                resolve($newImg);
-            });
-        });
-    }
+              resolve($newImg);
+          });
+      });
+  }
 
-    async function appendItemOverlay(id, url) {
-        if (NI) {
-            const $it = document.querySelector(`.item-id-${id}`);
-            if ($it) {
-                $it.classList.add("priw8-item-small-icon");
-                const $newImg = await loadItemImage(url);
-                $newImg.style.position = "absolute";
-                $newImg.zIndex = 1;
-                const $canv = $it.querySelector("canvas");
-                $canv.parentElement.appendChild($newImg);
-            }
-        } else {
-            g.loadQueue.push({
-                fun: async () => {
-                    const $it = document.querySelector(`#item${id}`);
-                    if ($it) {
-                        $it.classList.add("priw8-item-small-icon");
-                        const $newImg = await loadItemImage(url);
-                        const $img = $it.querySelector("img");
-                        if ($img) {
-                            $img.parentElement.appendChild($newImg);
-                        }
-                    }
-                }
-            });
-        }
-    }
+  async function appendItemOverlay(id, url) {
+      if (NI) {
+          const $it = document.querySelector(`.item-id-${id}`);
+          if ($it) {
+              $it.classList.add("priw8-item-small-icon");
+              const $newImg = await loadItemImage(url);
+              $newImg.style.position = "absolute";
+              $newImg.zIndex = 1;
+              const $canv = $it.querySelector("canvas");
+              $canv.parentElement.appendChild($newImg);
+              console.log($it);
+          }
+      } else {
+          g.loadQueue.push({
+              fun: async () => {
+                  const $it = document.querySelector(`#item${id}`);
+                  if ($it) {
+                      $it.classList.add("priw8-item-small-icon");
+                      const $newImg = await loadItemImage(url);
 
-    function onItem(items) {
-        for (const id in items) {
-            const it = items[id];
-            const tp = getItemTp(it);
-            const tpMap = getTpMap(tp);
-            const entry = config[tp] ?? config[tpMap];
-            if (entry) {
-                appendItemOverlay(id, entry);
-            }
-        }
-    }
+                      const $img = $it.querySelector("img");
+                      if ($img) {
+                          $img.parentElement.appendChild($newImg);
+                      }
+                  }
+              }
+          });
+      }
+  }
 
-    function init() {
-        const org = NI ? window.Engine.communication.parseJSON : window.parseInput;
-        const override = function (data) {
-            const res = org.apply(this, arguments);
-            if (data.item) {
-                onItem(data.item);
-            }
-            return res;
-        };
-        if (NI)
-            window.Engine.communication.parseJSON = override;
-        else
-            window.parseInput = override;
+  function onItem(items) {
+      for (const id in items) {
+          const it = items[id];
+          const tp = getItemTp(it);
+          const tpMap = getTpMap(tp);
+          const entry = config[tp] ?? config[tpMap];
+          if (entry) {
+              appendItemOverlay(id, entry);
+          }
+      }
+  }
 
-        const css = `
-            /* SI */
-            .priw8-item-small-icon img:not(.priw8-item-overlay) {
-                width: 20px;
-                height: 20px;
-                top: 12px;
-                z-index: 1;
-            }
-            /* NI */
-            .priw8-item-small-icon canvas.canvas-icon {
-                width: 20px;
-                height: 20px;
-                top: 12px;
-                z-index: 1;
-            }
-            .priw8-item-small-icon .amount, .priw8-item-small-icon .cooldown {
-                z-index: 2;
-            }
-        `;
-        const $style = document.createElement("style");
-        $style.innerHTML = css;
-        document.head.appendChild($style);
-    }
+  function init() {
+      const org = NI ? window.Engine.communication.parseJSON : window.parseInput;
+      const override = function(data) {
+          const res = org.apply(this, arguments);
+          if (data.item) {
+              onItem(data.item);
+          }
+          return res;
+      }
+      if (NI)
+          window.Engine.communication.parseJSON = override;
+      else
+          window.parseInput = override;
 
-    function parseStats(stats) {
-        if (!stats) return {};
-        return Object.fromEntries(
-            stats.split(";").map(entry => {
-                const [key, value] = entry.split("=");
-                return [key, value ?? "true"];
-            })
-        );
-    }
+      const css = `
+          /* SI */
+          .priw8-item-small-icon img:not(.priw8-item-overlay) {
+              width: 20px;
+              height: 20px;
+              top: 12px;
+              z-index: 1;
+          }
 
-    function getItemStats(it) {
-        if (!it._cachedStats) {
-            it._cachedStats = parseStats(it.stat);
-        }
-        return it._cachedStats;
-    }
+          /* NI */
+          .priw8-item-small-icon canvas.canvas-icon {
+              width: 20px;
+              height: 20px;
+              top: 12px;
+              z-index: 1;
+          }
+          .priw8-item-small-icon .amount, .priw8-item-small-icon .cooldown {
+              z-index: 2;
+          }
+      `;
 
-    function getItemTp(it) {
-        const stats = getItemStats(it);
-        if (stats.teleport || (stats.custom_teleport && stats.custom_teleport !== "true")) {
-            return stats.teleport ?? stats.custom_teleport;
-        }
-        return "";
-    }
+      const $style = document.createElement("style");
+      $style.innerHTML = css;
+      document.head.appendChild($style);
+  }
 
-    function getTpMap(tp) {
-        return tp.split(",")[0];
-    }
+  function parseStats(stats) {
+      if (!stats)
+          return {};
 
-    function getLocationItems(loc) {
-        return NI ? Engine.items.fetchLocationItems(loc) : Object.values(g.item).filter(it => it.loc === loc);
-    }
+      const spl = stats.split(";");
+      const res = {};
+      for (const entry of spl) {
+          const pair = entry.split("=");
+          res[pair[0]] = pair[1] ?? "true";
+      }
+      return res;
+  }
 
-    window.listStones = function () {
-        getLocationItems("g").forEach(it => {
-            const stats = getItemStats(it);
-            const tp = getItemTp(it);
-            if (tp !== "") {
-                const tpMap = getTpMap(tp);
-                window.log(`${it.name} (${stats.opis}): ${tpMap} (${tp})`);
-            }
-        });
-    };
+  function getItemStats(it) {
+      return it._cachedStats ?? parseStats(it.stat);
+  }
 
-    init();
-})();
+  function getItemTp(it) {
+      const stats = getItemStats(it);
+      if (stats.teleport || stats.custom_teleport && stats.custom_teleport != "true") {
+          return stats.teleport ?? stats.custom_teleport;
+      }
+      return "";
+  }
+
+  function getTpMap(tp) {
+      return tp.split(",")[0];
+  }
+
+  function getLocationItems(loc) {
+      return NI ? Engine.items.fetchLocationItems(loc).map(it => it) : Object.values(g.item).filter(it => it.loc == loc);
+  }
+
+  window.listStones = function() {
+      getLocationItems("g").forEach(it => {
+          const stats = getItemStats(it);
+
+          const tp = getItemTp(it);
+
+          if (tp != "") {
+              const tpMap = getTpMap(tp);
+              window.log(`${it.name} (${stats.opis}): ${tpMap} (${tp})`);
+          }
+      });
+  }
+
+  init();
+}();
