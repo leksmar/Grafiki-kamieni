@@ -285,7 +285,6 @@
 "3326":"https://micc.garmory-cdn.cloud/obrazki/npc/her/smokbarb.gif",
 "3330":"https://micc.garmory-cdn.cloud/obrazki/npc/her/smokbarb.gif",
 "3329":"https://micc.garmory-cdn.cloud/obrazki/npc/her/smokbarb.gif",
-"3327":"https://micc.garmory-cdn.cloud/obrazki/npc/her/smokbarb.gif",
 "3328":"https://micc.garmory-cdn.cloud/obrazki/npc/her/smokbarb.gif",
 //negotep
 
