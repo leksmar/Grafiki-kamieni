@@ -155,6 +155,7 @@
 "7375":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/stworzyciel.gif",
 //eol
 "7352":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/piaskowy_potwor-6a.gif",
+"7351":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/piaskowy_potwor-6a.gif",
 //morski potwor
 "7357":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/osmiornica-1b.gif",
 //byk
@@ -296,7 +297,19 @@
 //brat
 
 //pers
-
+"1154":"https://micc.garmory-cdn.cloud/obrazki/npc/her/ksiaze-kasim.gif",
+"2864":"https://micc.garmory-cdn.cloud/obrazki/npc/her/ksiaze-kasim.gif",
+"1233":"https://micc.garmory-cdn.cloud/obrazki/npc/her/ksiaze-kasim.gif",
+"2865":"https://micc.garmory-cdn.cloud/obrazki/npc/her/ksiaze-kasim.gif",
+"7063":"https://micc.garmory-cdn.cloud/obrazki/npc/her/ksiaze-kasim.gif",
+"7064":"https://micc.garmory-cdn.cloud/obrazki/npc/her/ksiaze-kasim.gif",
+"2866":"https://micc.garmory-cdn.cloud/obrazki/npc/her/ksiaze-kasim.gif",
+"2867":"https://micc.garmory-cdn.cloud/obrazki/npc/her/ksiaze-kasim.gif",
+"7067":"https://micc.garmory-cdn.cloud/obrazki/npc/her/ksiaze-kasim.gif",
+"7068":"https://micc.garmory-cdn.cloud/obrazki/npc/her/ksiaze-kasim.gif",
+"2868":"https://micc.garmory-cdn.cloud/obrazki/npc/her/ksiaze-kasim.gif",
+"2869":"https://micc.garmory-cdn.cloud/obrazki/npc/her/ksiaze-kasim.gif",
+"2870":"https://micc.garmory-cdn.cloud/obrazki/npc/her/ksiaze-kasim.gif",
 //kocha
 
 //koziec
