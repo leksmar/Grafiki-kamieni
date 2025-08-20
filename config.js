@@ -336,7 +336,6 @@
 //baca
 "350":"https://micc.garmory-cdn.cloud/obrazki/npc/her/baca-bez-lowiec.gif",
 "7334":"https://micc.garmory-cdn.cloud/obrazki/npc/her/baca-bez-lowiec.gif",
-"351":"https://micc.garmory-cdn.cloud/obrazki/npc/her/baca-bez-lowiec.gif",
 "7335":"https://micc.garmory-cdn.cloud/obrazki/npc/her/baca-bez-lowiec.gif",
 "7336":"https://micc.garmory-cdn.cloud/obrazki/npc/her/baca-bez-lowiec.gif",
 "7337":"https://micc.garmory-cdn.cloud/obrazki/npc/her/baca-bez-lowiec.gif",
