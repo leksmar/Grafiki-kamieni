@@ -1,9 +1,7 @@
 // ==UserScript==
-// @name         Kamyki
-// @namespace    hello
-// @version      0.24
-// @description  try to take over the world!
-// @author       Priw8 edited by leksmar
+// @name         Kcs grafiki
+// @version      0.1
+// @author       Priw8 edited by Kisiel
 // @match        *.margonem.pl/
 // @match        *.margonem.com/
 // @icon         https://micc.garmory-cdn.cloud/obrazki/itemy/neu/kamien3.gif

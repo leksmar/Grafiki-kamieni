@@ -2,7 +2,7 @@
 
 !function() {
   const config = {
-    //Tytani
+//Tytani
 //orla
 "189":"https://micc.garmory-cdn.cloud/obrazki/npc/tyt/dziewicza_orlica.gif",
 //kic
@@ -81,7 +81,7 @@
 // Terro jaskinia
 "3335":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/terrorzaur_pus.gif",
 // ĹwiÄtynia przedsionek
-"3339":"https://i.imgur.com/hudMHxo.gif",
+//"3339":"https://i.imgur.com/hudMHxo.gif",
 // chaegd
 "3341":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/bar_smokoszef.gif",
 // Vera
@@ -159,6 +159,7 @@
 "7357":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/osmiornica-1b.gif",
 //byk
 "7368":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/ingotia_minotaur-7a.gif",
+"1740":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/ingotia_minotaur-7a.gif",
 //Fodug
 "7441":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/fodug_zolash.gif",        
 //Sheba
@@ -181,7 +182,6 @@
 "7057":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/magradit_ifryt.gif",
 //Tesciowa
 "351":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/goral-e2-tesciowa-rumcajsa.gif",
-
 //Krab
 "1741":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/krab_big3.gif",
 //Krab2
@@ -191,6 +191,7 @@
 //ozirus
 "7069":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/mumia-ozirus.gif",
 //czacha
+"7065":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/alghul-czaszka-1a.gif",
 "7066":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/alghul-czaszka-1a.gif",
 //Milek magii
 "6946":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/blotniaki_milosnik_magii.gif",
@@ -199,6 +200,7 @@
 //Milek rycy
 "6944":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/blotniaki_milosnik_rycerzy.gif",
 //Dzertek moxos
+"6937":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/moloch-jertek.gif",
 "6938":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/moloch-jertek.gif",
 //Kambion
 "229":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/kambion.gif",
@@ -214,6 +216,8 @@
 "1324":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/lesne_widmo.gif",
 //ochyd
 "3466":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/ugrape2.gif",
+//Morthen
+"6773":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/krasnolud_boss.gif",
 //nadzo
 "6772":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/nadzorczyni_krasnoludow.gif",
 //czolg
@@ -240,6 +244,7 @@
 //owadzia
 "5395":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/zadlak-e2-owadzia-matka.gif",
 //kobold
+"816":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/kobold07.gif",
 "2729":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/kobold07.gif",
 //agar
 "177":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/glut_agar.gif",
@@ -263,6 +268,50 @@
 //muszita
 "1060":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/st-puma.gif",
 
+//herosi
+//smok
+"3339":"https://micc.garmory-cdn.cloud/obrazki/npc/her/smokbarb.gif",
+//negotep
+
+//tep
+
+//dębo
+
+//vapor
+
+//demonis
+
+//mulher
+
+//viva
+
+//lichwa
+
+//obło
+
+//baca
+
+//roger
+
+//brat
+
+//pers
+
+//kocha
+
+//koziec
+
+//kostek
+
+//opek
+
+//przewo
+
+//złod
+
+//karm
+
+//patryk
   }
 
   const NI = typeof window.Engine != "undefined";
