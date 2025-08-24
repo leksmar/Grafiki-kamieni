@@ -1,4 +1,4 @@
-// tpStoneOverlay - pokazywanie obrazkĂłw na teleportach do wybranych map
+// tpStoneOverlay - pokazywanie obrazkĂłw na teleportach do wybranych map 
 
 !function() {
   const config = {
