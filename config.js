@@ -2,7 +2,6 @@
 
 !function() {
   const config = {
-"1":"https://micc.garmory-cdn.cloud/obrazki/postacie/vip/5336990_2.gif",
 //Tytani
 //orla
 "189":"https://micc.garmory-cdn.cloud/obrazki/npc/tyt/dziewicza_orlica.gif",
