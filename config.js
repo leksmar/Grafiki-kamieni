@@ -80,6 +80,7 @@
 "3327":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/terrorzaur_pus.gif",
 // Terro jaskinia
 "3335":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/terrorzaur_pus.gif",
+"3334":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/terrorzaur_pus.gif",
 // ĹwiÄtynia przedsionek
 //"3339":"https://i.imgur.com/hudMHxo.gif",
 // chaegd
@@ -90,6 +91,8 @@
 "3039":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/szkiel_set.gif",
 // Chopesz
 "3035":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/chopesh2.gif",
+// Wabicielka
+"8187": "https://micc.garmory-cdn.cloud/obrazki/npc/e2/trist2_wabicielka-1a.gif",
 //quezal
 "5684":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/quetzalcoatl.gif",
 //yaotl
