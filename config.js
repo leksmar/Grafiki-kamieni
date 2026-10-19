@@ -1,4 +1,4 @@
-// tpStoneOverlay - pokazywanie obrazkĂłw na teleportach do wybranych map 
+// tpStoneOverlay - pokazywanie obrazkow na teleportach do wybranych map 
 
 !function() {
   const config = {
@@ -75,7 +75,7 @@
 // Furion
 "2356":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/wl-mrozu02.gif",
 // Nymphemonia
-"6065":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/nymphemonia.gif",
+"6064":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/nymphemonia.gif",
 // Mazurnik
 "8532":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/mazurnik_przybrzezny-1a.gif",
 // Terrozaur
