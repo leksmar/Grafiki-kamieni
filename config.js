@@ -13,14 +13,18 @@
 "7060":"https://micc.garmory-cdn.cloud/obrazki/npc/tyt/archdemon.gif",
 //zoons
 "7477":"https://micc.garmory-cdn.cloud/obrazki/npc/tyt/versus-zoons.gif",
-//Ĺowka
+//Ĺowka
 "6477":"https://micc.garmory-cdn.cloud/obrazki/npc/tyt/lowcz-wspo-driady.gif",
+//goblin
+"6478":"https://micc.garmory-cdn.cloud/obrazki/npc/tyt/titangoblin.gif",
 //przyzy
 "6476":"https://micc.garmory-cdn.cloud/obrazki/npc/tyt/przyz_demon_sekta.gif",
 //magua
 "2024":"https://micc.garmory-cdn.cloud/obrazki/npc/tyt/maddok-tytan.gif",
+"7848":"https://micc.garmory-cdn.cloud/obrazki/npc/tyt/maddok_magua-1b.gif",
 //teza
 "5709":"https://micc.garmory-cdn.cloud/obrazki/npc/tyt/tezcatlipoca.gif",
+"5708":"https://micc.garmory-cdn.cloud/obrazki/npc/tyt/tezcatlipoca.gif",
 //barba
 "3312":"https://micc.garmory-cdn.cloud/obrazki/npc/tyt/hebrehoth_smokoludzie.gif",
 //th
@@ -32,6 +36,7 @@
 "3361":"https://micc.garmory-cdn.cloud/obrazki/npc/kol/mamlambo_final2.gif",
 //regulus
 "3883":"https://micc.garmory-cdn.cloud/obrazki/npc/kol/bazyliszek.gif",
+"3884":"https://micc.garmory-cdn.cloud/obrazki/npc/kol/bazyliszek.gif",
 //regulus2
 "202":"https://micc.garmory-cdn.cloud/obrazki/npc/kol/bazyliszek.gif",
 //umibozu
@@ -76,16 +81,19 @@
 "2356":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/wl-mrozu02.gif",
 // Nymphemonia
 "6064":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/nymphemonia.gif",
+"6065":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/nymphemonia.gif",
 // Mazurnik
 "8532":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/mazurnik_przybrzezny-1a.gif",
 // Terrozaur
 "3327":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/terrorzaur_pus2.gif",
+"3334":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/terrorzaur_pus.gif",
 // Vaenra
 "3340":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/bar_smoczyca.gif",
 // Chaegd
 "3341":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/bar_smokoszef.gif",
 // Set
 "3039":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/neferkar_set-1a.gif",
+"3038":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/szkiel_set.gif",
 // Chopesz
 "3035":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/chopesh2.gif",
 // Fovos
@@ -94,6 +102,7 @@
 "8541":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/wyslannik_tellarow-1a.gif",
 // Sybilia
 "4057":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/tri2_witch_e2.gif",
+"4056":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/tri2_witch_e2.gif",
 // Wabicielka
 "8187":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/trist2_wabicielka-1a.gif",
 // Quetzalcoatl
@@ -102,14 +111,17 @@
 "5695":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/mahoplowca.gif",
 // Cuaitl Citlalin
 "5672":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/maho-cuaitl.gif",
+"1901":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/maho-cuaitl.gif",
 // Tolypeutes
 "5662":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/bolita.gif",
+"5657":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/bolita.gif",
 // Silvanasus
 "3628":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/silvanasus.gif",
 // Dendroculus
 "3597":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/dendroculus.gif",
 // Luna (Nocna Pustelnia p.2)
 "8556":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/elgary_luna-1b.gif",
+"8555":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/elgary_luna-1b.gif",
 // Noumenia (ta sama mapa co Luna)
 //"8556":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/elgary_noumenia-1a.gif",
 // Fangaj
@@ -120,10 +132,12 @@
 "7827":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/arytodam_olbrzymi-1b.gif",
 // Marloth
 "7864":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/drider-marlloth.gif",
+"2766":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/marlloth.gif",
 // Al'diphrin
 "7859":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/drow-aldiphrin-wladca.gif",
 // Arachniregina (Arachnitopia p.6)
 "1159":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/regina-e2.gif",
+"1142":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/regina-e2.gif",
 // Rycerz z za malym mieczem (ta sama mapa co Arachniregina)
 //"1159":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/pajeczy16.gif",
 // Furb
@@ -132,6 +146,7 @@
 "5943":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/sekta-zufulus.gif",
 // Sataniel
 "7695":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/sekta-sataniel.gif",
+"5942":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/sekta-sataniel.gif",
 // Bergermona
 "5945":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/sekta-bergermona.gif",
 // Annaniel (Tajemnicza Siedziba)
@@ -153,10 +168,15 @@
 "4185":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/zmutowana-roslinka.gif",
 // Torka
 "6053":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/thuz-patr1.gif",
+"6051":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/thuz-patr1.gif",
 // Ogr Stalowy Pazur
 "7693":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/ogr_stalowy_pazur-1a.gif",
+// Ogr Drapak
+"2526":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/ogr_drapak.gif",
 // Chryz (Drzewo Dusz p.2)
 "6055":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/chryzoprenia-1a.gif",
+// Drzewo
+"6057":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/drzewoe2.gif",
 // Wrzosera (ta sama mapa)
 //"6055":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/wrzosera-1b.gif",
 // Cantedewia (ta sama mapa)
@@ -185,14 +205,17 @@
 "7474":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/goons_asterus-1a.gif",
 // Fodug
 "7441":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/fodug_zolash.gif",
+"716":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/fodug_zolash.gif",
 // Amuno
 "7454":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/amuno.gif",
+"3265":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/amuno.gif",
 // Tesciowa Rumcajsa
 "7338":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/goral-e2-tesciowa-rumcajsa.gif",
 // Wojt Fistula
 "7340":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/goral-e2-wojt-fistula.gif",
 // Worundiel
 "7466":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/worundriel02.gif",
+"1276":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/worundriel02.gif",
 //stworek
 "7375":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/stworzyciel.gif",
 "7372":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/stworzyciel.gif",
@@ -212,6 +235,7 @@
 "7454":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/amuno.gif",
 //gruber
 "6955":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/grubber-ochlaj.gif",
+"6956":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/grubber-ochlaj.gif",
 //burek
 "5856":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/orkczd.gif",
 //piracie2
@@ -248,6 +272,14 @@
 "6938":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/moloch-jertek.gif",
 //Kambion
 "229":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/kambion.gif",
+"4998":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/kambion.gif",
+//Maddok
+"1481":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/maddok5.gif",
+"1463":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/maddok_roz.gif",
+//Krol szczur
+"972":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/krolszczur.gif",
+//Mech goblin
+"359":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/mechgoblin4.gif",
 
 //E2 99-
 //Centaur
@@ -256,12 +288,15 @@
 "6781":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/gnom_figlid.gif",
 //Gopa
 "1150":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/goplana.gif",
+"1151":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/goplana.gif",
 //Widmo
 "1324":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/lesne_widmo.gif",
+"1325":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/lesne_widmo.gif",
 //ochyd
 "3466":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/ugrape2.gif",
 //Morthen
 "6773":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/krasnolud_boss.gif",
+"6774":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/krasnolud_boss.gif",
 //nadzo
 "6772":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/nadzorczyni_krasnoludow.gif",
 //czolg
@@ -269,14 +304,17 @@
 "6634":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/dlawiciel5.gif",
 //Stopa
 "1204":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/wlochacze_wielka_stopa.gif",
+"3530":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/wlochacze_wielka_stopa.gif",
 //zbrojek
 "6615":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/magaz_zbrojmistrz.gif",
 //grabarz
 "6623":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/nieu_mnich_grabarz.gif",
 //Lisz
 "6625":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/lisz_demilisze.gif",
+"6627":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/lisz_demilisze.gif",
 //tollok
 "6632":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/tollok_jask_atamatu.gif",
+"6633":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/tollok_jask_utumatu.gif",
 //Jotun
 "6537":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/kam_olbrzym-b.gif",
 "6535":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/kam_olbrzym-b.gif",
@@ -285,6 +323,7 @@
 "3437":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/gnoll12.gif",
 //gnoll
 "333":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/gnoll11.gif",
+"2646":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/gnoll11.gif",
 //owadzia
 "5395":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/zadlak-e2-owadzia-matka.gif",
 //kobold
@@ -300,8 +339,11 @@
 "2308":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/zbir-szczet.gif",
 //dzik
 "4156":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/dzik.gif",
+"4157":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/dzik.gif",
 //wladek
 "727":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/gobmag2.gif",
+//goblin samuraj
+"3149":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/gobsamurai.gif",
 //zorg
 "2532":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/zbir-e2-zorg.gif",
 //shea
@@ -311,6 +353,11 @@
 "632":"https://micc.garmory-cdn.cloud/obrazki/npc/e1/kotolak_lowca.gif",
 //muszita
 "1060":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/st-puma.gif",
+"580":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/st-puma.gif",
+//goral
+"2761":"https://micc.garmory-cdn.cloud/obrazki/npc/e2/goral05.gif",
+//tuz
+"630":"https://micc.garmory-cdn.cloud/obrazki/npc/woj/tuz01.gif",
 
 //herosi
 //smok
