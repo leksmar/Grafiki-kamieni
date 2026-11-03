@@ -518,8 +518,7 @@
 //patryk
   }
 
-  // Zwoje przywolania druzyny na herosa - dopasowanie po nazwie herosa w nazwie przedmiotu
-  // Klucz = fragment nazwy herosa (bez wielkosci liter i polskich znakow), wartosc = obrazek
+  
   const heroConfig = {
     "domine ecclesiae": "https://micc.garmory-cdn.cloud/obrazki/npc/her/domina.gif",
     "mietek zul": "https://micc.garmory-cdn.cloud/obrazki/npc/her/zulek.gif",
