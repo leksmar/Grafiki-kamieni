@@ -518,6 +518,55 @@
 //patryk
   }
 
+  // Zwoje przywolania druzyny na herosa - dopasowanie po nazwie herosa w nazwie przedmiotu
+  // Klucz = fragment nazwy herosa (bez wielkosci liter i polskich znakow), wartosc = obrazek
+  const heroConfig = {
+    "domine ecclesiae": "https://micc.garmory-cdn.cloud/obrazki/npc/her/domina.gif",
+    "mietek zul": "https://micc.garmory-cdn.cloud/obrazki/npc/her/zulek.gif",
+    "mroczny patryk": "https://micc.garmory-cdn.cloud/obrazki/npc/her/bardzozlypatryk.gif",
+    "karmazynowy msciciel": "https://micc.garmory-cdn.cloud/obrazki/npc/her/gnom_msciciel.gif",
+    "zlodziej": "https://micc.garmory-cdn.cloud/obrazki/npc/her/zlodziej.gif",
+    "zly przewodnik": "https://micc.garmory-cdn.cloud/obrazki/npc/her/mnich-zly2.gif",
+    "opetany paladyn": "https://micc.garmory-cdn.cloud/obrazki/npc/her/opetanypaladyn02.gif",
+    "piekielny kosciej": "https://micc.garmory-cdn.cloud/obrazki/npc/her/piekielny_kosciej.gif",
+    "koziec maciciel sciezek": "https://micc.garmory-cdn.cloud/obrazki/npc/her/koziec_maciciel_sciezek.gif",
+    "kochanka nocy": "https://micc.garmory-cdn.cloud/obrazki/npc/her/kochanka-nocy.gif",
+    "ksiaze kasim": "https://micc.garmory-cdn.cloud/obrazki/npc/her/ksiaze-kasim.gif",
+    "swiety braciszek": "https://micc.garmory-cdn.cloud/obrazki/npc/her/sw_braciszek.gif",
+    "zloty roger": "https://micc.garmory-cdn.cloud/obrazki/npc/her/szkielet_pirata.gif",
+    "baca bez lowiec": "https://micc.garmory-cdn.cloud/obrazki/npc/her/baca-bez-lowiec.gif",
+    "czarujaca atalia": "https://micc.garmory-cdn.cloud/obrazki/npc/her/czarujaca-atalia.gif",
+    "oblakany lowca orkow": "https://micc.garmory-cdn.cloud/obrazki/npc/her/oblakany_ac1dae9d.gif",
+    "lichwiarz grauhaz": "https://micc.garmory-cdn.cloud/obrazki/npc/her/lichwiarz_grauhaz.gif",
+    "viviana nandin": "https://micc.garmory-cdn.cloud/obrazki/npc/her/viv_nandin_i3bd1.gif",
+    "przeraza": "https://micc.garmory-cdn.cloud/obrazki/npc/her/przeraza.gif",
+    "demonis pan nicosci": "https://micc.garmory-cdn.cloud/obrazki/npc/her/sekta_demon_cz_s.gif",
+    "mulher ma": "https://micc.garmory-cdn.cloud/obrazki/npc/her/mulher_ma.gif",
+    "vapor veneno": "https://micc.garmory-cdn.cloud/obrazki/npc/her/joziniec_bagienny.gif",
+    "deborozec": "https://micc.garmory-cdn.cloud/obrazki/npc/her/zwierz_kniei.gif",
+    "tepeyollotl": "https://micc.garmory-cdn.cloud/obrazki/npc/her/tep_35ecb966.gif",
+    "widmo triady": "https://micc.garmory-cdn.cloud/obrazki/npc/her/trist2_widmo_triady.gif",
+    "negothep czarny kaplan": "https://micc.garmory-cdn.cloud/obrazki/npc/her/negthotep.gif",
+    "mlody smok": "https://micc.garmory-cdn.cloud/obrazki/npc/her/smokbarb.gif",
+  }
+
+  function normalizeName(s) {
+      return (s || "").toLowerCase().replace(/ł/g, "l").normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+  }
+
+  function getHeroImage(it) {
+      const name = normalizeName(it.name);
+      if (!name.includes("przywolania druzyny")) {
+          return undefined;
+      }
+      for (const key in heroConfig) {
+          if (name.includes(normalizeName(key))) {
+              return heroConfig[key];
+          }
+      }
+      return undefined;
+  }
+
   const NI = typeof window.Engine != "undefined";
 
   function loadItemImage(url) {
@@ -581,7 +630,7 @@
           const it = items[id];
           const tp = getItemTp(it);
           const tpMap = getTpMap(tp);
-          const entry = config[tp] ?? config[tpMap];
+          const entry = config[tp] ?? config[tpMap] ?? getHeroImage(it);
           if (entry) {
               appendItemOverlay(id, entry);
           }
@@ -670,6 +719,15 @@
           if (tp != "") {
               const tpMap = getTpMap(tp);
               window.log(`${it.name} (${stats.opis}): ${tpMap} (${tp})`);
+          }
+      });
+  }
+
+  // Wypisuje w konsoli zwoje przywolania z plecaka - przydatne do uzupelnienia heroConfig
+  window.listSummons = function() {
+      getLocationItems("g").forEach(it => {
+          if (normalizeName(it.name).includes("przywolania druzyny")) {
+              window.log(`${it.name} -> ${getHeroImage(it) ? "OK" : "BRAK obrazka"}`);
           }
       });
   }
