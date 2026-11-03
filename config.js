@@ -546,7 +546,7 @@
     "deborozec": "https://micc.garmory-cdn.cloud/obrazki/npc/her/zwierz_kniei.gif",
     "tepeyollotl": "https://micc.garmory-cdn.cloud/obrazki/npc/her/tep_35ecb966.gif",
     "widmo triady": "https://micc.garmory-cdn.cloud/obrazki/npc/her/trist2_widmo_triady.gif",
-    "negothep czarny kaplan": "https://micc.garmory-cdn.cloud/obrazki/npc/her/negthotep.gif",
+    "negthotep czarny kaplan": "https://micc.garmory-cdn.cloud/obrazki/npc/her/negthotep.gif",
     "mlody smok": "https://micc.garmory-cdn.cloud/obrazki/npc/her/smokbarb.gif",
   }
 
